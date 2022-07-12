@@ -3,14 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SquareComponent } from './square/square.component';
+import { BoardComponent } from './board/board.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbButtonModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SquareComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NbButtonModule,
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbThemeModule.forRoot({name: 'cosmic'})
   ],
   providers: [],
   bootstrap: [AppComponent]
